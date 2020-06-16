@@ -1,0 +1,35 @@
+{
+  "name": "spacex-launch-app",
+  "version": "1.0.0",
+  "description": "An app for learning GraphQL and Apollo using the SpaceX API for data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CianHub/spacex-launch-app.git"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "spacex",
+    "react",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Cian O'Gralaigh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CianHub/spacex-launch-app/issues"
+  },
+  "homepage": "https://github.com/CianHub/spacex-launch-app#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.1.0",
+    "nodemon": "^2.0.4"
+  }
+}
