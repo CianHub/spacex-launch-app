@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 import { Launch } from '../models/launch.model';
 
@@ -44,9 +45,12 @@ export default function LaunchItem({
       </div>
 
       <div className="">
-        <button className="btn btn-secondary mission-item-details-btn">
+        <Link
+          to={`/launch/${launch.flight_number}`}
+          className="btn btn-secondary mission-item-details-btn"
+        >
           Launch Details
-        </button>
+        </Link>
       </div>
     </div>
   );
