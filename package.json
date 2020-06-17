@@ -4,8 +4,10 @@
   "description": "An app for learning GraphQL and Apollo using the SpaceX API for data",
   "main": "server.js",
   "scripts": {
+    "client": "npm start --prefix client",
     "start": "ts-node server.ts",
-    "server": "nodemon server.ts"
+    "server": "nodemon server.ts",
+    "start-dev": "concurrently \"npm run server\" \"npm run client \""
   },
   "repository": {
     "type": "git",
