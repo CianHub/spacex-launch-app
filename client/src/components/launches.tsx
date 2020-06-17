@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
+import { Launch } from '../models/launch.model';
+import LaunchItem from './launch-item';
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -16,11 +18,31 @@ const LAUNCHES_QUERY = gql`
 
 export function Launches() {
   const { loading, error, data } = useQuery(LAUNCHES_QUERY);
-  console.log(data);
+
+  const contentHandler = (): JSX.Element | undefined => {
+    if (loading) return <h4>Loading...</h4>;
+    else if (error) return <h4>{{ error }}</h4>;
+    else {
+      if (data) {
+        console.log(data);
+        return (
+          <Fragment>
+            {data.launches.map((item: Launch) => {
+              return (
+                <LaunchItem key={item.flight_number} launch={item}></LaunchItem>
+              );
+            })}
+          </Fragment>
+        );
+      }
+    }
+  };
+
   return (
-    <div>
-      <h1 className="display-4 my-3"></h1>
-    </div>
+    <React.Fragment>
+      <h1 className="display-4 my-3">Launches</h1>
+      {contentHandler()}
+    </React.Fragment>
   );
 }
 

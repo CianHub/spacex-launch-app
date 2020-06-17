@@ -8,7 +8,7 @@ import {
 } from 'graphql';
 
 import axios from 'axios';
-// launch
+// launch object
 const LaunchType = new GraphQLObjectType({
   name: 'Launch',
   fields: () => ({
@@ -21,7 +21,7 @@ const LaunchType = new GraphQLObjectType({
   }),
 });
 
-// rocket
+// rocket object
 const RocketType = new GraphQLObjectType({
   name: 'Rocket',
   fields: () => ({
@@ -31,7 +31,7 @@ const RocketType = new GraphQLObjectType({
   }),
 });
 
-// root query
+// GraphQL queries
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
