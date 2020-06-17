@@ -9,7 +9,8 @@ function App() {
         src={logo}
         alt="SpaceX Logo"
         style={{
-          width: 200,
+          width: 150,
+          height: 100,
           margin: 'auto 0',
           filter: 'brightness(0) invert(1)',
         }}
