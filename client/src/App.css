@@ -1,0 +1,20 @@
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  width: 100%;
+}
+
+.mission-grid-item {
+  display: grid;
+}
+
+.mission-item-patch {
+  filter: grayscale();
+  width: 40px;
+  height: 40px;
+}
+
+.margin-left {
+  margin-left: 0.5em;
+}

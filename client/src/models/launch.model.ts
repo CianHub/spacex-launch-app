@@ -4,4 +4,5 @@ export interface Launch {
   lauch_year: number;
   launch_date_local: string;
   launch_success: boolean;
+  links: { mission_patch_small: string };
 }

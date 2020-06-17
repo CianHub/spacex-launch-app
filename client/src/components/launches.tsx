@@ -13,6 +13,9 @@ const LAUNCHES_QUERY = gql`
       lauch_year
       launch_date_local
       launch_success
+      links {
+        mission_patch_small
+      }
     }
   }
 `;
@@ -27,13 +30,13 @@ export function Launches() {
       if (data) {
         console.log(data);
         return (
-          <Fragment>
+          <div className="mission-grid">
             {data.launches.map((item: Launch) => {
               return (
                 <LaunchItem key={item.flight_number} launch={item}></LaunchItem>
               );
             })}
-          </Fragment>
+          </div>
         );
       }
     }
