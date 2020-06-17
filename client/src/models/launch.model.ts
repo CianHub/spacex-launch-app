@@ -3,5 +3,5 @@ export interface Launch {
   mission_name: string;
   lauch_year: number;
   launch_date_local: string;
-  success: boolean;
+  launch_success: boolean;
 }

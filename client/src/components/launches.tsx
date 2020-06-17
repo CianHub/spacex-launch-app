@@ -11,7 +11,7 @@ const LAUNCHES_QUERY = gql`
       mission_name
       lauch_year
       launch_date_local
-      success
+      launch_success
     }
   }
 `;
@@ -21,7 +21,7 @@ export function Launches() {
 
   const contentHandler = (): JSX.Element | undefined => {
     if (loading) return <h4>Loading...</h4>;
-    else if (error) return <h4>{{ error }}</h4>;
+    else if (error) console.log(error);
     else {
       if (data) {
         console.log(data);
