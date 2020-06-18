@@ -9,6 +9,10 @@
   display: grid;
 }
 
+.mission-launch-details {
+  width: 100%;
+}
+
 .mission-item-patch {
   filter: grayscale();
   width: 40px;
@@ -26,4 +30,8 @@
 
 svg {
   width: 200px;
+}
+
+.mission-launch-details {
+  margin-top: 2em;
 }

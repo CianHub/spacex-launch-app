@@ -13,6 +13,11 @@ const LAUNCHES_QUERY = gql`
       lauch_year
       launch_date_local
       launch_success
+      rocket {
+        id
+        rocket_name
+        rocket_type
+      }
       links {
         mission_patch_small
       }
@@ -28,7 +33,6 @@ export function Launches() {
     else if (error) console.log(error);
     else {
       if (data) {
-        console.log(data);
         return (
           <div className="mission-grid">
             {data.launches.map((item: Launch) => {
@@ -44,7 +48,7 @@ export function Launches() {
 
   return (
     <React.Fragment>
-      <h1 className="display-4 my-3">Launches</h1>
+      <h5 className="display-4 my-3">Launches</h5>
       <MissionKey></MissionKey>
       {contentHandler()}
     </React.Fragment>

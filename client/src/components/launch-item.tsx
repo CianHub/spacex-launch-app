@@ -10,6 +10,7 @@ export default function LaunchItem({
 }: {
   launch: Launch;
 }): JSX.Element {
+  console.log(launch.links);
   return (
     <div className="card card-body mb-3 mission-grid-item">
       <div className="">

@@ -1,8 +1,11 @@
+import { Rocket } from './rocket.model.launch';
+
 export interface Launch {
   flight_number: number;
   mission_name: string;
-  lauch_year: number;
+  launch_year: number;
   launch_date_local: string;
   launch_success: boolean;
+  rocket: Rocket;
   links: { mission_patch_small: string };
 }

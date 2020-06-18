@@ -6,6 +6,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Logo from './components/logo';
+import { Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -17,7 +18,9 @@ function App() {
       <Router>
         <div className="container">
           <div className="logo">
-            <Logo></Logo>
+            <Link to={`/`}>
+              <Logo></Logo>
+            </Link>
           </div>
           <Route exact path="/" component={Launches}></Route>
           <Route

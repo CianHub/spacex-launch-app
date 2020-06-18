@@ -12,7 +12,7 @@ export default function Logo(): JSX.Element {
       width="331.644px"
       height="40.825px"
       viewBox="0 0 331.644 40.825"
-      enable-background="new 0 0 331.644 40.825"
+      enableBackground="new 0 0 331.644 40.825"
       xmlSpace="preserve"
     >
       <g>
