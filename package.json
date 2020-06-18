@@ -53,7 +53,6 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
-    "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }
 }
