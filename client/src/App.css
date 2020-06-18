@@ -1,6 +1,6 @@
 .mission-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 1em;
   width: 100%;
 }
@@ -34,4 +34,9 @@ svg {
 
 .mission-launch-details {
   margin-top: 2em;
+}
+
+.btn {
+  border: 1px white solid;
+  background-color: transparent;
 }

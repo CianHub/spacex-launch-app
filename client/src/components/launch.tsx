@@ -1,10 +1,7 @@
 import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
-import classNames from 'classnames';
-import MissionKey from './mission-key';
-import LaunchItem from './launch-item';
-import { Launch } from '../models/launch.model';
+
 import LaunchDetailsItem from './launch-details-item';
 
 const LAUNCH_QUERY = gql`

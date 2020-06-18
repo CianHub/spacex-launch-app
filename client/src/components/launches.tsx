@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
+
 import { Launch } from '../models/launch.model';
 import LaunchItem from './launch-item';
 import MissionKey from './mission-key';
@@ -10,7 +11,7 @@ const LAUNCHES_QUERY = gql`
     launches {
       flight_number
       mission_name
-      lauch_year
+      launch_year
       launch_date_local
       launch_success
       rocket {

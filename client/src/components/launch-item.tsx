@@ -30,7 +30,7 @@ export default function LaunchItem({
                 <img
                   className={classNames(
                     { 'img-fluid mb-3 mission-item-patch': true },
-                    { 'margin-left': launch?.mission_name?.length <= 29 }
+                    { 'margin-left': true }
                   )}
                   src={launch?.links?.mission_patch_small}
                   alt="The patch awarded for the mission"
