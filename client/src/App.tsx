@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 import './App.css';
 
-const client = new ApolloClient({ uri: 'http://localhost:5000/graphql' });
+const client = new ApolloClient({ uri: '/graphql' });
 
 function App() {
   return (
