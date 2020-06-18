@@ -49,7 +49,7 @@ export default function LaunchDetails(props: any) {
 
   return (
     <React.Fragment>
-      <h1 className="display-4 my-3">Launch</h1>
+      <h5 className="my-3">Launch</h5>
       <MissionKey></MissionKey>
       {contentHandler()}
     </React.Fragment>

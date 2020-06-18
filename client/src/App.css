@@ -18,3 +18,12 @@
 .margin-left {
   margin-left: 0.5em;
 }
+
+.logo {
+  width: 200px;
+  margin-top: 1em;
+}
+
+svg {
+  width: 200px;
+}

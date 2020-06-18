@@ -5,9 +5,9 @@ import LaunchDetails from './components/launch';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Logo from './components/logo';
 
 import './App.css';
-import logo from './logo.png';
 
 const client = new ApolloClient({ uri: 'http://localhost:5000/graphql' });
 
@@ -16,16 +16,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="container">
-          <img
-            src={logo}
-            alt="SpaceX Logo"
-            style={{
-              width: 150,
-              height: 100,
-              margin: 'auto 0',
-              filter: 'brightness(0) invert(1)',
-            }}
-          />
+          <div className="logo">
+            <Logo></Logo>
+          </div>
           <Route exact path="/" component={Launches}></Route>
           <Route
             exact
