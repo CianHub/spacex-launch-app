@@ -1,6 +1,6 @@
 import React from 'react';
 import Launches from './components/launches';
-import Launch from './components/launch';
+import LaunchDetails from './components/launch';
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -27,7 +27,11 @@ function App() {
             }}
           />
           <Route exact path="/" component={Launches}></Route>
-          <Route exact path="/launch/:flightNumber" component={Launch}></Route>
+          <Route
+            exact
+            path="/launch/:flightNumber"
+            component={LaunchDetails}
+          ></Route>
         </div>
       </Router>
     </ApolloProvider>

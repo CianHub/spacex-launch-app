@@ -24,7 +24,7 @@ export default function LaunchItem({
               )}
             >
               {' '}
-              {launch.mission_name}
+              {launch?.mission_name}
               {launch?.links?.mission_patch_small ? (
                 <img
                   className={classNames(
@@ -32,21 +32,21 @@ export default function LaunchItem({
                     { 'margin-left': launch?.mission_name?.length <= 29 }
                   )}
                   src={launch?.links?.mission_patch_small}
-                  alt="An image of the patch awarded for the mission"
+                  alt="The patch awarded for the mission"
                 />
               ) : null}
             </span>
           </p>
           <p>
             Date:{' '}
-            <Moment format="DD/MM/YYYY">{launch.launch_date_local}</Moment>
+            <Moment format="DD/MM/YYYY">{launch?.launch_date_local}</Moment>
           </p>
         </div>
       </div>
 
       <div className="">
         <Link
-          to={`/launch/${launch.flight_number}`}
+          to={`/launch/${launch?.flight_number}`}
           className="btn btn-secondary mission-item-details-btn"
         >
           Launch Details
